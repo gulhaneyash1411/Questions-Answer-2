@@ -1,0 +1,106 @@
+import sys
+class CarServiceStationCode(object) :
+    sc =  "Python-inputs"
+    sum = 0
+    @staticmethod
+    def main( args) :
+        c = CarServiceStationCode()
+        sc =  "Python-inputs"
+        print("Service Code    Service           Hatchback   Sedan  SUV \n   BS01         Basic Servicing    INR2000      INR4000  INR5000 \n   EF01         Engine Fixing      INR5000      INR8000  INR10000 \n   CF01         Clutch Fixing      INR2000      INR4000  INR6000 \n   BF01         Brake Fixing       INR1000      INR1500  INR2500 \n   GF01         Gear Fixing        INR3000      INR6000  INR8000")
+        print("Type Of Car : ", end ="")
+        car = input()
+        car = car.lower()
+        if (car=="hatchback") :
+            c.hatchback()
+        elif(car=="sedan") :
+            c.sedan()
+        elif(car=="suv") :
+            c.suv()
+        else :
+            print("Wrong Car Enter")
+            System.exit(1)
+        print("Total Bill : " + str(c.sum))
+        if (c.sum > 10000) :
+            print("1 free complimentary cleaning should be provided ")
+    def hatchback(self) :
+        while (True) :
+            print("Service Codes : ", end ="")
+            code = input()
+            code = code.upper()
+            if (code=="BS01") :
+                self.sum = self.sum + 2000
+                print("Charges for Basic Servicing - 2000")
+            elif(code=="EF01") :
+                self.sum = self.sum + 5000
+                print("Charges for  Engine Fixing  - 5000")
+            elif(code=="CF01") :
+                self.sum = self.sum + 2000
+                print("Charges for  Clutch Fixing  - 2000")
+            elif(code=="BF01") :
+                self.sum = self.sum + 1000
+                print("Charges for  Brake Fixing  - 1000")
+            elif(code=="GF01") :
+                self.sum = self.sum + 3000
+                print("Charges for  Gear Fixing  - 3000")
+            else :
+                print("Invalid Code")
+            print("One More Service Y/N : ")
+            s = input()
+            if (s=="N" or s=="n") :
+                break
+    def sedan(self) :
+        while (True) :
+            print("Service Codes : ", end ="")
+            code = input()
+            code = code.upper()
+            if (code=="BS01") :
+                self.sum = self.sum + 4000
+                print("Charges for Basic Servicing - 4000")
+            elif(code=="EF01") :
+                self.sum = self.sum + 8000
+                print("Charges for  Engine Fixing  - 8000")
+            elif(code=="CF01") :
+                self.sum = self.sum + 4000
+                print("Charges for  Clutch Fixing  - 4000")
+            elif(code=="BF01") :
+                self.sum = self.sum + 1500
+                print("Charges for  Brake Fixing  - 1500")
+            elif(code=="GF01") :
+                self.sum = self.sum + 6000
+                print("Charges for  Gear Fixing  - 6000")
+            else :
+                print("Invalid Code")
+            print("One More Service Y/N : ")
+            s = input()
+            if (s=="N" or s=="n") :
+                break
+    def suv(self) :
+        while (True) :
+            print("Service Codes : ", end ="")
+            code = input()
+            code = code.upper()
+            if (code=="BS01") :
+                self.sum = self.sum + 5000
+                print("Charges for Basic Servicing - 4000")
+            elif(code=="EF01") :
+                self.sum = self.sum + 10000
+                print("Charges for  Engine Fixing  - 8000")
+            elif(code=="CF01") :
+                self.sum = self.sum + 6000
+                print("Charges for  Clutch Fixing  - 4000")
+            elif(code=="BF01") :
+                self.sum = self.sum + 2500
+                print("Charges for  Brake Fixing  - 1500")
+            elif(code=="GF01") :
+                self.sum = self.sum + 8000
+                print("Charges for  Gear Fixing  - 6000")
+            else :
+                print("Invalid Code")
+            print("One More Service Y/N : ")
+            s = input()
+            if (s=="N" or s=="n") :
+                break
+
+
+if __name__=="__main__":
+    CarServiceStationCode.main(sys.argv)
